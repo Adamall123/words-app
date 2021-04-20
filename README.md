@@ -50,3 +50,13 @@ Cały kod podzielony jest na kilka części:
 
 Frontend
 Vue 2.6 z Vuetify
+
+
+
+
+# tworzenie nowej migracji
+./dev api yarn knex migrate:make add_users_sets
+
+
+# tworzenie nowej migracji
+./dev api yarn knex migrate:down 20210420133729_init_schema.js
