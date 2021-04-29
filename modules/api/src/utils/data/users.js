@@ -2,9 +2,10 @@ const faker = require('faker')
 const { createUser } = require('../../services/userService')
 
 module.exports = db => {
-  const hasUser = async nickname => {
-    nickname = nickname || `${faker.random.words()}`
-    return createUser(db.getKnex(), { nickname })
+  const hasUser = async input => {
+    // input 
+    // nickname = nickname || `${faker.random.words()}`
+    return createUser(db.getKnex(),  input )
   }
 
   const hasUsers = async (howMany = 3) => {

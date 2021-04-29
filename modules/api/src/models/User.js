@@ -12,7 +12,10 @@ class User extends Base {
 
       properties: {
         id: { type: 'string' },
-        nickname: { type: 'string' },
+        name: { type: 'string' },
+        surname: { type: 'string'},
+        email: { type: 'string'},
+        password: { type: 'string'},
         createdAt: { type: 'timestamp' },
         updatedAt: { type: 'timestamp' }
       }
