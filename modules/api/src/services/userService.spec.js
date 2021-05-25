@@ -7,13 +7,19 @@ const service = require('./userService')
 describe('createUser', () => {
   test('should create a user', async () => {
     await service.createUser(db, {
-      nickname: 'Joe'
+      name: 'Joe',
+      surname: 'Adamson',
+      password: 'polak123',
+      email: 'test@o2.pl'
     })
 
-    const [user] = await Tester.grabFromDatabase('users')
+     const [user] = await Tester.grabFromDatabase('users')
 
     expect(user).toMatchObject({
-      nickname: 'Joe'
+      name: 'Joe',
+      surname: 'Adamson',
+      password: 'polak123',
+      email: 'test@o2.pl'
     })
   })
 })
